@@ -44,23 +44,27 @@ Run dev server
 
 To set up a development environment quickly, first install Python 3. Also
 install pip and pipenv. Optimized way to manage your virtualenv and package
-management
+management:
 
     1. `pip install pipenv`
     2. `$ pipenv intall --dev`
 
+Switch to virtualenv:
+
+    3. `$ pipenv shell --three`
+
 Install all dependencies:
 
-    3. `$ pip install -r requirements.txt`
+    4. `$ pip install -r requirements.txt`
 
 Create local.env files
 
-    4. `$ cd src`
-    5. `$ cp my_proj/settings/local.sample.env my_proj/settings/local.env`
+    5. `$ cd src`
+    6. `$ cp my_proj/settings/local.sample.env my_proj/settings/local.env`
 
 Run migrations:
 
-    6. `$ python manage.py migrate`
+    7. `$ python manage.py migrate`
 
 Run dev server
 
