@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}About{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="about" %}
+{% endblock %}
+
+<!-- Benefits of the Django application -->
+{% block container %}
+
+<div id="sec1" class="text-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>{% include "_brandname.html" %}</h1>
+        <p class="lead">An Awesome Tagline Goes Here</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sec2" class="text-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Meet The Team</h2>
+        <p class="lead">The Wonderful People Behind the Site</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="text-center"><img class="img-circle centered" height="150" src="https://digitalocean.cdn.prismic.io/digitalocean/ad115492f52f7de06e318b7c876f6277a0939550_mohammed-coovadia.png" alt="profile pic"></div>
+        <p class="heavy text-center">Mohammed Coovadia</p>
+        <h2>Sr. 3-hole Punch Operator</h2>
+        <p>Starting at a very young age, Mohammed always dreamed of mastering the 3-hole punch. The first time he was able to punch a piece of paper is still memorable, and completely changed the trajectory of his career. He still holds and cherishes the chads from his apprenticeship years as a reminder of what is possible. </p>
+      </div>
+      <div class="col-lg-4">
+        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/2/" alt="profile pic"></div>
+        <p class="heavy text-center">James King</p>
+        <h2>CEO</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      </div>
+      <div class="col-lg-4">
+        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/1/" alt="profile pic"></div>
+        <p class="heavy text-center">Kate Lamport</p>
+        <h2>Front-end designer</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div id="sec3">
+  <div class="container">
+    <div class="row">
+      <div id="map-outer" class="col-md-12">
+        <div id="address" class="col-md-4">
+          <h2>Our Location</h2>
+          <address>
+            <strong>DigitalOcean</strong><br>
+            101 6th Avenue<br>
+            Manhattan<br>
+            New York, 10013<br>
+            <abbr>P:</abbr> +1 555-555-5555
+          </address>
+        </div>
+        <div id="map-container" class="col-md-8"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock container %}
+
+{% block scripts %}
+  <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script>
+
+   function init_map() {
+     // Enter the latitude and longitude of your office here
+	 var myLocation = new google.maps.LatLng(40.7235371, -74.0065314);
+
+     var mapOptions = {
+          center: myLocation,
+          zoom: 14
+     };
+
+	 var marker = new google.maps.Marker({
+	   position: myLocation,
+	   title:"We are here"});
+
+     var map = new google.maps.Map(document.getElementById("map-container"),
+                                   mapOptions);
+	 marker.setMap(map);
+   }
+
+   google.maps.event.addDomListener(window, 'load', init_map);
+  </script>
+{% endblock scripts %}
