@@ -2,19 +2,22 @@
 
 # cloudcalc
 
-cloudcalc is a _short description_. It is built with [Python][0] using the [Django Web Framework][1].
+cloudcalc is a team website to expose interesting homegrown Support and Success
+tools to our team. It is built with [Python][0] using the
+[Django Web Framework][1].
 
 This project has the following basic apps:
 
-* App1 (short desc)
-* App2 (short desc)
-* App3 (short desc)
+* django (A High-level Python Web framework that encourages rapid development
+  and clean, pragmatic design)
+* DB (short desc)
+* More stuff?? (short desc)
 
 ## Installation
 
-### Quick start
+### Quick start (using pip)
 
-To set up a development environment quickly, first install Python 3. It
+To set up a development environment quickly, first install Python 3 and pip. It
 comes with virtualenv built-in. So create a virtual env by:
 
     1. `$ python3 -m venv cloudcalc`
@@ -22,13 +25,46 @@ comes with virtualenv built-in. So create a virtual env by:
 
 Install all dependencies:
 
-    pip install -r requirements.txt
+    3. `$ pip install -r requirements.txt`
+
+Create local.env files
+
+    4. `$ cd src`
+    5. `$ cp my_proj/settings/local.sample.env my_proj/settings/local.env`
 
 Run migrations:
 
-    python manage.py migrate
+    6. `$ python manage.py migrate`
 
-### Detailed instructions
+Run dev server
+
+    7. `$ python manage.py runserver`
+
+### Detailed instructions (Recommended)
+
+To set up a development environment quickly, first install Python 3. Also
+install pip and pipenv. Optimized way to manage your virtualenv and package
+management
+
+    1. `pip install pipenv`
+    2. `$ pipenv intall --dev`
+
+Install all dependencies:
+
+    3. `$ pip install -r requirements.txt`
+
+Create local.env files
+
+    4. `$ cd src`
+    5. `$ cp my_proj/settings/local.sample.env my_proj/settings/local.env`
+
+Run migrations:
+
+    6. `$ python manage.py migrate`
+
+Run dev server
+
+    7. `$ python manage.py runserver`
 
 Take a look at the docs for more information.
 
