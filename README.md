@@ -13,6 +13,9 @@ This project has the following basic apps:
 * DB (short desc)
 * More stuff?? (short desc)
 
+Based off, and big thanks to https://github.com/arocks/edge for allowing a quick 
+start
+
 ## Installation
 
 ### Quick start (using pip)
