@@ -7,8 +7,8 @@ import accounts.urls
 from . import views
 
 # Personalized admin site settings like title and header
-admin.site.site_title = 'Cloudcalc Site Admin'
-admin.site.site_header = 'Cloudcalc Administration'
+admin.site.site_title = 'dockyard Site Admin'
+admin.site.site_header = 'dockyard Administration'
 
 urlpatterns = [
     path('', views.HomePage.as_view(), name='home'),

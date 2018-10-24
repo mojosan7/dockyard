@@ -1,5 +1,5 @@
 # In production set the environment variable like this:
-#    DJANGO_SETTINGS_MODULE=cloudcalc.settings.production
+#    DJANGO_SETTINGS_MODULE=dockyard.settings.production
 from .base import *             # NOQA
 import logging.config
 
@@ -32,7 +32,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Must mention ALLOWED_HOSTS in production!
-# ALLOWED_HOSTS = ["cloudcalc.com"]
+# ALLOWED_HOSTS = ["dockyard.com"]
 
 # Cache the templates in memory for speed-up
 loaders = [

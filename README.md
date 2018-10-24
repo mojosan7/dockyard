@@ -1,8 +1,8 @@
 
 
-# cloudcalc
+# dockyard
 
-cloudcalc is a team website to expose interesting homegrown Support and Success
+dockyard is a team website to expose interesting homegrown Support and Success
 tools to our team. It is built with [Python][0] using the
 [Django Web Framework][1].
 
@@ -13,7 +13,7 @@ This project has the following basic apps:
 * DB (short desc)
 * More stuff?? (short desc)
 
-Based off, and big thanks to https://github.com/arocks/edge for allowing a quick 
+Based off, and big thanks to https://github.com/arocks/edge for allowing a quick
 start
 
 ## Installation
@@ -23,8 +23,8 @@ start
 To set up a development environment quickly, first install Python 3 and pip. It
 comes with virtualenv built-in. So create a virtual env by:
 
-    1. `$ python3 -m venv cloudcalc`
-    2. `$ . cloudcalc/bin/activate`
+    1. `$ python3 -m venv dockyard`
+    2. `$ . dockyard/bin/activate`
 
 Install all dependencies:
 

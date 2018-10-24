@@ -1,5 +1,5 @@
 """
-Django settings for cloudcalc project.
+Django settings for dockyard project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/dev/topics/settings/
@@ -89,9 +89,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'cloudcalc.urls'
+ROOT_URLCONF = 'dockyard.urls'
 
-WSGI_APPLICATION = 'cloudcalc.wsgi.application'
+WSGI_APPLICATION = 'dockyard.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
