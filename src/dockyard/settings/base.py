@@ -76,6 +76,7 @@ INSTALLED_APPS = (
 
     'profiles',
     'accounts',
+    'computecalc',
 
 )
 

@@ -4,6 +4,7 @@ from django.conf.urls.static import static
 from django.urls import include, path
 import profiles.urls
 import accounts.urls
+import computecalc.urls
 from . import views
 
 # Personalized admin site settings like title and header
@@ -15,6 +16,7 @@ urlpatterns = [
     path('about/', views.AboutPage.as_view(), name='about'),
     path('users/', include(profiles.urls)),
     path('admin/', admin.site.urls),
+    path('calc/', include(computecalc.urls)),
     path('', include(accounts.urls)),
 ]
 
