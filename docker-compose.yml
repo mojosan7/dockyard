@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+
+  web:
+    build: .
+    command: python /code/src/manage.py migrate
+    command: python /code/src/manage.py runserver 0.0.0.0:8000
+    container_name: dockyard_django
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
