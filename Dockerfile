@@ -12,7 +12,7 @@ RUN mkdir /code
 WORKDIR /code
 
 # Copy the current directory contents into the container at /code
-ADD . /code/
+COPY . /code/
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
