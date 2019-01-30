@@ -12,12 +12,15 @@ RUN mkdir /code
 WORKDIR /code
 
 # Copy the current directory contents into the container at /code
-ADD . /code/
+COPY . /code/
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
 
 COPY ./src/dockyard/settings/local.sample.env /code/src/dockyard/settings/local.env
+
+RUN python /code/src/manage.py migrate
+# Run python /code/random-scripts/db_setup.py
 
 
 # Install dependencies
